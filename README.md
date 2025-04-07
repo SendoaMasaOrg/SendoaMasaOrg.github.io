@@ -1,1 +1,0 @@
-# SendoaMasaOrg.github.io
