@@ -2816,6 +2816,10 @@ body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   line-height: 1.42857143; }
 
+/* Regla para alto contraste */
+body.contrast-high .header {
+  background-color: #000000; }
+
 .header {
   background-color: #013161; }
 
@@ -2886,6 +2890,10 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-direction: column; } }
+/* Regla para alto contraste */
+body.contrast-high .marcopie {
+  background-color: #000000; }
+
 .marcopie {
   padding: 15px 0 15px 0;
   background-color: #013161;
