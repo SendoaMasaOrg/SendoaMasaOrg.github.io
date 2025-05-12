@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eu" class="no-js">
+<html lang="es" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://SendoaMasaOrg.github.io/sdg-production-data/eu',
+  remoteDataBaseUrl: 'https://SendoaMasaOrg.github.io/sdg-production-data/es',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -40,9 +40,9 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: [],
+  ignoredDisaggregations: null,
 
-  language: 'eu',
+  language: 'es',
 
   mapColors: {
     "default": [
@@ -119,9 +119,9 @@ var translations = {
         
     <title>
         
-        Adierazlea 17.9.1 -
+        Indicador 17.9.1 -
         
-        Garapen-bidean dauden herrialdeei hitzemandako laguntza finantzario eta teknikoak (Iparralde-Hegoalde eta Hegoalde-Hegoalde lankidetzaren bitartez, eta baita lankidetza triangeluarraren bitartez ere) duen balioa, dolarretan - Garapen Jasangarrirako Helburuen adierazleak
+        Valor en dólares de la asistencia financiera y técnica (incluso mediante la cooperación Norte-Sur, Sur‐Sur y triangular) prometida a los países en desarrollo - Indicadores para los Objetivos de Desarrollo Sostenible
     </title>
 
 
@@ -143,7 +143,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20250409134219">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20250512163515">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -164,12 +164,12 @@ var translations = {
         
 
     </head>
-<body class="language-eu
+<body class="language-es
 layout-indicator-iframe
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Alfa","default_contrast":"Kontraste estandarra","disable_high_kontrast":"Desaktibatu kontraste handia","disclaimer":"Webgune hau garapen egoeran dago. Eskerrik asko zure <a href=\"mailto:%email_contacts.suggestions\">iruzkinengatik</a>.","enable_high_kontrast":"Kontraste handia gaitu","hide_menu":"Ezkutatu nabigazio-menua","high_contrast":"Kontraste handia","internet_explorer_message":"webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.","internet_explorer_message_title":"Interneteko nabigatzaile hau jada ez da bateragarria","logo_title":"Joan hasierako orrira","show_menu":"Erakutsi nabigazio-menua","skip_link":"Eduki nagusira joan","tag_line":"Gure mundua eraldatzeko 17 helburu","toggle_menu":"Txandakatu menua. Egin klik menua zabaltzeko edo uzkurtzeko.","toggle_search":"Bilaketa-barra. Egin klik bilaketa-barra handitzeko edo murrizteko."};</script>
+<script>translations['header'] = {"alpha":"Alfa","default_contrast":"Contraste estándar","disable_high_contrast":"Desactivar alto contraste","disclaimer":"Este es un sitio web de desarrollo. Agradecemos sus <a href=\"mailto:%email_contacts.suggestions\">comentarios</a>.","enable_high_contrast":"Habilitar alto contraste","hide_menu":"Ocultar el menú de navegación","high_contrast":"Alto contraste","internet_explorer_message":"Hemos detectado que está utilizando Internet Explorer para visitar este sitio web. Internet Explorer ahora está siendo eliminado por Microsoft. Como resultado, este sitio web ya no es compatible con ninguna versión de Internet Explorer. Algunas características de este sitio no funcionarán. Debe usar un navegador moderno como Edge, Chrome, Firefox o Safari. Si tiene dificultades para instalar o acceder a un navegador diferente, comuníquese con su equipo de soporte de TI.","internet_explorer_message_title":"Este navegador de Internet ya no es compatible","logo_title":"Ir a la página de inicio","show_menu":"Mostrar el menú de navegación","skip_link":"Saltar al contenido principal","tag_line":"17 Objetivos para transformar nuestro mundo","toggle_menu":"Alternar menú. Haga clic para expandir o contraer el menú.","toggle_search":"Barra de búsqueda. Haga clic para ampliar o reducir la barra de búsqueda."};</script>
 
 
 <script type="text/template" id="item_template">
@@ -187,15 +187,15 @@ layout-indicator-iframe
       >
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %><h6><% } else { %><h5><% } %>
           <span aria-hidden="true"><%=translations.t(fieldItem.label)%><i class="fa fa-chevron-down"></i></span>
-          <span class="sr-only">Azpikategoriak erakutsi: <%=translations.t(fieldItem.label)%></span>
+          <span class="sr-only">Mostrar subcategorías: <%=translations.t(fieldItem.label)%></span>
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %></h6><% } else { %></h5><% } %>
       </button>
       <div class="variable-options">
         <fieldset>
-          <legend class="sr-only">Azpikategoriak - <%=translations.t(fieldItem.field)%></legend>
+          <legend class="sr-only">Subcategorías - <%=translations.t(fieldItem.field)%></legend>
           <div>
-            <button data-type="select">Dena hautatu</button>
-            <button data-type="clear">Dena garbitu</button>
+            <button data-type="select">Seleccionar todo</button>
+            <button data-type="clear">Limpiar todo</button>
           </div>
           <% _.each(fieldItem.values, function(item) { %>
             <label>
@@ -206,10 +206,10 @@ layout-indicator-iframe
       </div>
 
       <% if(allowedFields.indexOf(fieldItem.field) == -1) { %>
-        <div class="variable-hint" id="variable-hint-<%=fieldItem.field.replace(/ /g, '-')%>">«<%= translations.t(_.find(edges, { To: fieldItem.field }).From) %>» hautatzen denean eskuragarri
+        <div class="variable-hint" id="variable-hint-<%=fieldItem.field.replace(/ /g, '-')%>">Disponible cuando se selecciona «<%= translations.t(_.find(edges, { To: fieldItem.field }).From) %>»
         </div>
         <div class="no-data-hint" id="no-data-hint-<%=fieldItem.field.replace(/ /g, '-')%>">
-          Ez dago aukerarik eskuragarri aurreko aukeraketak direla eta
+          No hay opciones disponibles debido a los filtros anteriores
         </div>
       <% }%>
 
@@ -221,9 +221,9 @@ layout-indicator-iframe
   
   <% if(units.length > 1) { %>
   
-    <h4>Neurri-unitatea</h4>
+    <h4>Unidad de medida</h4>
     <fieldset>
-      <legend class="sr-only">Neurri-unitatea</legend>
+      <legend class="sr-only">Unidad de medida</legend>
       <% _.each(units, function(unitsItem, index) { %>
         <% var checked = (selectedUnit) ? (selectedUnit==unitsItem) : (index==0); %>
         <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(unitsItem)%></label>
@@ -238,9 +238,9 @@ layout-indicator-iframe
   
   <% if(serieses.length > 1) { %>
   
-    <h4>Seriea</h4>
+    <h4>Serie</h4>
     <fieldset>
-      <legend class="sr-only">Seriea</legend>
+      <legend class="sr-only">Serie</legend>
       <% _.each(serieses, function(seriesItem, index) { %>
         <% var isProxy = (proxySerieses.includes(seriesItem)) %>
         <% var checked = (selectedSeries) ? (selectedSeries==seriesItem) : (index==0); %>
@@ -252,9 +252,9 @@ layout-indicator-iframe
   
 </script>
 
-<script>translations['indicator'] = {"annotation_2030_target":"2030erako adierazlearen helburua","annotation_series_break":"Seriearen haustura","announce_data_added":"Grafiko eta taula eguneratuak datuak sartzeko.","announce_data_not_available":"Taulak eta grafikoak ez dute daturik erakusten.","announce_data_removed":"Grafiko eta taula eguneratuak datuak kentzeko.","announce_series_switched":"Grafiko eta taula eguneratuak serie desberdin bat erakusteko.","announce_unit_switched":"Grafiko eta taula eguneratuak, unitate desberdin bat erakusteko.","apply":"Aplikatu","cancel":"Ezeztatu","change_breakdowns":"Desagregazioak aldatu","chart":"Grafikoa","chart_annotation":"Grafiko batean idaztea","clear_all":"Dena garbitu","clear_selections":"Ezabatu aukeraketak","data_keyboard_navigation":"Sakatu Enter datu-puntuetan ezkerreko eta eskuineko gezi-teklekin.","data_not_available":"Informazio hau ez dago eskuragarri. Aukeratu datu alternatiboak erakusteko.","data_tabular_alternative":"Datuak taula forman ikusteko, joan Taula pestañara.","dataset_size_warning":"Datu gehiegi daude grafikoan erakusteko. Dena ez da erakutsiko selekzio batzuk kendu arte.","download_chart":"Deskargatu grafikoko datuak (.csv)","download_chart_image":"Deskargatu grafikoaren irudia (.png)","download_chart_image_title":"Deskargatu grafikoaren irudia PNG gisa","download_csv":"Deskargatu datuak (.csv)","download_csv_title":"Deskargatu CSV datuak","download_geojson":"Deskargatu mapako datuak (.geojson)","download_geojson_title":"Deskargatu mapako datuak GeoJSON bezala","download_headline":"Deskargatu titularren datuak (.csv)","download_headline_title":"Deskargatu datu mundialak CSV gisa","download_source":"Jatorrizko datuak deskargatu (.csv)","download_source_for_disaggregations":"Deskargatu desagregazioen jatorrizko datuak (.csv)","download_source_sdmx":"SDMX iturburu-kodea deskargatu (.xml)","download_source_sdmx_title":"Deskargatu iturburu-datuak SDMX bezala","download_source_title":"Iturri-datuak deskargatu CSV gisa","download_table":"Deskargatu taulako datuak (.csv)","edit":"Adierazlea editatu","edit_configuration":"Konfigurazioa editatu","edit_data":"Datuak editatu","edit_metadata":"Metadatuak editatu","empty_metadata_placeholder":"Ez dago eskuragarri adierazle honetarako","empty_metadata_placeholder_sources":"Ez dago eskuragarri iturri honetarako","footnote":"Oharra","geographical_area":"Eremu geografikoa","global_metadata":"Metadatu mundialak","global_metadata_blurb":"Taula honek GJHen adierazleen metadatuei buruzko informazioa ematen du, NBEko Estatistika Batzordeak definitzen dituen moduan.  <a href=\"https://unstats.un.org/sdgs/metadata/\">Metadatu osoagoak</a> NBEko Estatistika Dibisioak ematen ditu.","headline_data":"Datu nagusiak","legend_help":"Egin klik legendan grafikotik banakako lerroak ezabatzeko.","loading":"Kargatzen","loading_map":"Mapa kargatzen","map":"Mapa","map_fullscreen":"Ikusi mapa pantaila osoan","map_fullscreen_exit":"Mapatik pantaila osora ateratzea","map_search":"Bilaketa mapan","map_search_cancel":"Ezabatu bilaketa mapan","map_search_hide":"Mapan bilaketa ezkutatzea","map_search_show":"Mapan bilaketa erakutsi","map_slider_back":"Ikusi aurreko denbora-tarterako maparen datuak","map_slider_forward":"Ikusi hurrengo denbora-tarterako maparen datuak","map_slider_keyboard":"Ikusi maparen datuak denbora-tarte osoan, ezkerreko eta eskuineko gezi-teklak erabilita","map_slider_mouse":"Mapako datuetan zehar nabigatu, denbora-tartearen arabera","map_year_slider":"Urteko irristagailua","map_zoom_home":"Maparen zoom lehenetsia berrezartzea","map_zoom_in":"Zoom mapan","map_zoom_out":"Mapa murriztea","national_metadata":"Metadatu nazionalak","national_metadata_blurb":"Taula honek GJHen adierazletik hurbilen dagoen eta eskuragarria den %country.adjective adierazle errealerako metadatuak ematen ditu. Kontuan izan %country.adjective GJHen adierazle globala guztiz eskuragarri denean ere, taula hau kontsultatu daitekeela metodologia nazionalari eta metadatu espezifikoei buruzko informazioa lortzeko.","next":"Hurrengo adierazlea","no_data_hint":"Ez dago aukerarik eskuragarri aurreko aukeraketak direla eta","no_headline_data":"Ez dago datu nagusirik","note":"oharra","plot_legend_description":"Grafikoaren legenda: grafikoan sartutako lerroen zerrenda","previous":"Aurreko adierazlea","proxy":"Proxy","proxy_description":"Adierazle honek Nazio Batuen Erakundeak (NBE) zehaztutako adierazleaz bestelako datu batzuk ditu. Adierazle hau da gaur egun aurkitu den estatistiketatik egokiena dena.","select_all":"Dena hautatu","series":"Seriea","series_help":"Datuen desagregazioak ikusteko, aukeratu jarraian goitibeherako zerrenden kategoriak. Batzuk ez dira erabilgarri egongo goragoko mailan kategoriaren bat aukeratu arte","source":"Iturria","sources":"Iturriak","status":"adierazlearen egoera","sub_categories":"Azpikategoriak","sub_categories_show":"Azpikategoriak erakutsi:","table":"Taula","table_column_sort":"Sakatu zutabe honen bidez ordenatzeko","tags":"Etiketak","total":"Guztira","unit":"Unitatea","unit_of_measurement":"Neurri-unitatea","units_type":"Unitate mota","variable_hint":"«%field» hautatzen denean eskuragarri","view_indicator_list":"Ikusi helburu honetako adierazleen zerrenda"};</script>
+<script>translations['indicator'] = {"annotation_2030_target":"Objetivo del indicador para 2030","annotation_series_break":"Ruptura de la serie","announce_data_added":"Gráfico y tabla actualizados para incluir los datos.","announce_data_not_available":"La tabla y el gráfico no muestran datos.","announce_data_removed":"Gráfico y tabla actualizados para excluir los datos.","announce_series_switched":"Gráfico y tabla actualizados para mostrar una serie diferente.","announce_unit_switched":"Gráfico y tabla actualizados para mostrar una unidad diferente.","apply":"Aplicar","cancel":"Cancelar","change_breakdowns":"Cambiar los desgloses","chart":"Gráfico","chart_annotation":"Anotación en un gráfico","clear_all":"Limpiar todo","clear_selections":"Borrar selecciones","data_keyboard_navigation":"Pulse Enter para navegar por los puntos de datos con las teclas de flecha izquierda y derecha.","data_not_available":"Esta información no está disponible. Elija datos alternativos para mostrar.","data_tabular_alternative":"Para la alternativa de datos en forma de tabla, véase la pestaña Tabla.","dataset_size_warning":"Hay demasiados conjuntos de datos para mostrar en el gráfico. No todo se mostrará hasta que elimine algunas selecciones.","download_chart":"Descargar los datos del gráfico (.csv)","download_chart_image":"Descargar la imagen del gráfico (.png)","download_chart_image_title":"Descargar la imagen del gráfico como PNG","download_csv":"Descargar los datos (.csv)","download_csv_title":"Descargar los datos como CSV","download_geojson":"Descargar los datos del mapa (.geojson)","download_geojson_title":"Descargar los datos del mapa como GeoJSON","download_headline":"Descargar los datos de los titulares (.csv)","download_headline_title":"Descargar datos globales como CSV","download_source":"Descargar datos de origen (.csv)","download_source_for_disaggregations":"Descargar los datos de origen para los desgloses (.csv)","download_source_sdmx":"Descargar el código fuente SDMX (.xml)","download_source_sdmx_title":"Descargar los datos fuente como SDMX","download_source_title":"Descargar los datos fuente como CSV","download_table":"Descargar los datos de la tabla (.csv)","edit":"Editar el indicador","edit_configuration":"Editar la configuración","edit_data":"Editar datos","edit_metadata":"Editar metadatos","empty_metadata_placeholder":"No disponible para este indicador","empty_metadata_placeholder_sources":"No disponible para esta fuente","footnote":"Nota","geographical_area":"Área geográfica","global_metadata":"Metadatos globales","global_metadata_blurb":"Esta tabla proporciona información sobre los metadatos para los indicadores de los ODS tal como los define la Comisión de Estadística de la ONU. La <a href=\"https://unstats.un.org/sdgs/metadata/\">División de Estadística de las Naciones Unidas proporciona</a> los metadatos globales completos .","headline_data":"Datos principales","legend_help":"Haga clic en la leyenda para eliminar líneas individuales del gráfico.","loading":"Cargando","loading_map":"Cargando mapa","map":"Mapa","map_fullscreen":"Ver mapa a pantalla completa","map_fullscreen_exit":"Salir del mapa a pantalla completa","map_search":"Búsqueda en el mapa","map_search_cancel":"Borrar búsqueda en el mapa","map_search_hide":"Ocultar la búsqueda en los mapas","map_search_show":"Mostrar búsqueda en el mapa","map_slider_back":"Ver datos de los mapas para el período de tiempo anterior","map_slider_forward":"Ver los datos del mapa para el siguiente periodo de tiempo","map_slider_keyboard":"Vea los datos del mapa a lo largo del periodo de tiempo utilizando las teclas de flecha izquierda y derecha","map_slider_mouse":"Navegar por los datos del mapa por periodo de tiempo","map_year_slider":"Deslizador del año","map_zoom_home":"Restablecer el zoom predeterminado del mapa","map_zoom_in":"Zoom en el mapa","map_zoom_out":"Reducir el mapa","national_metadata":"Metadatos nacionales","national_metadata_blurb":"Esta tabla proporciona metadatos para el indicador real disponible a partir de las estadísticas de %country.name más cercanas al correspondiente indicador global de SDG. Tenga en cuenta que incluso cuando el indicador global de ODS esté totalmente disponible a partir de las estadísticas de %country.adjective, se debe consultar esta tabla para obtener información sobre la metodología nacional y otra información de metadatos específicos de %country.adjective.","next":"Siguiente indicador","no_data_hint":"No hay opciones disponibles debido a los filtros anteriores","no_headline_data":"No hay datos principales disponibles","note":"nota","plot_legend_description":"Leyenda del gráfico: lista de líneas incluidas en el gráfico","previous":"Indicador anterior","proxy":"Proxy","proxy_description":"Este indicador contiene algunos datos alternativos a los especificados por la Organización de las Naciones Unidas (ONU). Este indicador es la coincidencia más adecuada disponible actualmente.","select_all":"Seleccionar todo","series":"Serie","series_help":"Elija categorías de las listas desplegables a continuación para ver diferentes desgloses de los datos. Algunos no estarán disponibles hasta que se elija un nivel superior.","source":"Fuente","sources":"Fuentes","status":"Estado del indicador","sub_categories":"Subcategorías","sub_categories_show":"Mostrar subcategorías:","table":"Tabla","table_column_sort":"Pulse para ordenar por esta columna","tags":"Etiquetas","total":"Total","unit":"Unidad","unit_of_measurement":"Unidad de medida","units_type":"Tipo de unidades","variable_hint":"Disponible cuando se selecciona «%field»","view_indicator_list":"Ver la lista de indicadores de este objetivo"};</script>
 
-<script>translations['data'] = {"Year":"Urtea"};</script>
+<script>translations['data'] = {"Year":"Año"};</script>
 
 
 <div class="heading goal-banner indicator goal-17">
@@ -262,23 +262,26 @@ layout-indicator-iframe
         <div class="row">
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <a href="/17/" aria-label="Ikusi Helburuaren helmugak eta adierazleak 17" title="Ikusi Helburuaren helmugak eta adierazleak 17">
-                    <img src="https://sendoamasa.github.io/site/assets/img/goals/eu/17.png"
-                        alt="Helburuak lortzeko aliantzak - Helburua 17"
+                <a href="/17/" aria-label="Ver las metas e indicadores del Objetivo 17" title="Ver las metas e indicadores del Objetivo 17">
+                    <img src="https://sendoamasa.github.io/site/assets/img/goals/es/17.png"
+                        alt="Alianzas para Lograr los Objetivos - Objetivo 17"
                         id="goal-17"
                         class="goal-icon-image goal-icon-image-" />
                 </a>
             </div>
             <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-                <div>
-                    <h1>
+            <div>
+                <h1>
+                    
                         
-                        Adierazlea 17.9.1
+                            Indicador 17.9.1
                         
-                        <span class="lead-copy">Garapen-bidean dauden herrialdeei hitzemandako laguntza finantzario eta teknikoak (Iparralde-Hegoalde eta Hegoalde-Hegoalde lankidetzaren bitartez, eta baita lankidetza triangeluarraren bitartez ere) duen balioa, dolarretan</span>
-                    </h1>
-                </div>
+                    
+                    
+                    <span class="lead-copy">Valor en dólares de la asistencia financiera y técnica (incluso mediante la cooperación Norte-Sur, Sur‐Sur y triangular) prometida a los países en desarrollo</span>
+                </h1>
+            </div>
             </div>
         </div>
     </div>
@@ -303,8 +306,8 @@ layout-indicator-iframe
   id="indicatorData"
   data-indicatorid='indicator_17-9-1'
   data-id="17-9-1"
-  data-country="Euskadi"
-  data-charttitle="Garapen-bidean dauden herrialdeei hitzemandako laguntza finantzario eta teknikoak (Iparralde-Hegoalde eta Hegoalde-Hegoalde lankidetzaren bitartez, eta baita lankidetza triangeluarraren bitartez ere) duen balioa, dolarretan"
+  data-country="general.pais"
+  data-charttitle="Valor en dólares de la asistencia financiera y técnica (incluso mediante la cooperación Norte-Sur, Sur‐Sur y triangular) prometida a los países en desarrollo"
   data-charttitles="[]"
   data-measurementunit=""
   data-xaxislabel=""
@@ -320,7 +323,7 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Urtea&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
@@ -351,7 +354,28 @@ data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.national_metadata tab"
 
-            >Metadatu nazionalak</button>
+            >Metadatos nacionales</button>
+        </li>
+    
+        
+        
+        
+        
+        <li role="presentation" class="nav-item">
+            <button
+                type="button"
+                class="nav-link "
+                data-bs-toggle="tab"
+                id="tab-sources_alt"
+                data-bs-target="#sources_alt"
+                aria-controls="sources_alt"
+                role="tab"
+                data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to indicator.sources tab"
+
+            >Fuentes</button>
         </li>
     
         
@@ -372,28 +396,7 @@ data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.global_metadata tab"
 
-            >Metadatu mundialak</button>
-        </li>
-    
-        
-        
-        
-        
-        <li role="presentation" class="nav-item">
-            <button
-                type="button"
-                class="nav-link "
-                data-bs-toggle="tab"
-                id="tab-sources"
-                data-bs-target="#sources"
-                aria-controls="sources"
-                role="tab"
-                data-on="click"
-data-event-category="Tab change"
-data-event-action="Change metadata view"
-data-event-label="Change to indicator.sources tab"
-
-            >Iturriak</button>
+            >Metadatos globales</button>
         </li>
     
     
@@ -413,7 +416,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Taula honek GJHen adierazletik hurbilen dagoen eta eskuragarria den Euskaldun adierazle errealerako metadatuak ematen ditu. Kontuan izan Euskaldun GJHen adierazle globala guztiz eskuragarri denean ere, taula hau kontsultatu daitekeela metodologia nazionalari eta metadatu espezifikoei buruzko informazioa lortzeko.</p>
+                <p>Esta tabla proporciona metadatos para el indicador real disponible a partir de las estadísticas de general.pais más cercanas al correspondiente indicador global de SDG. Tenga en cuenta que incluso cuando el indicador global de ODS esté totalmente disponible a partir de las estadísticas de general.adjetivo, se debe consultar esta tabla para obtener información sobre la metodología nacional y otra información de metadatos específicos de general.adjetivo.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -715,9 +718,29 @@ data-event-label="Change to indicator.sources tab"
         
         
         
+        <div role="tabpanel" class="tab-pane " id="sources_alt">
+            <article>
+                
+
+                
+
+    
+
+
+            </article>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                <p>Taula honek GJHen adierazleen metadatuei buruzko informazioa ematen du, NBEko Estatistika Batzordeak definitzen dituen moduan.  <a href="https://unstats.un.org/sdgs/metadata/">Metadatu osoagoak</a> NBEko Estatistika Dibisioak ematen ditu.</p>
+                <p>Esta tabla proporciona información sobre los metadatos para los indicadores de los ODS tal como los define la Comisión de Estadística de la ONU. La <a href="https://unstats.un.org/sdgs/metadata/">División de Estadística de las Naciones Unidas proporciona</a> los metadatos globales completos .</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -727,7 +750,7 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Adierazlea </th>
+        <th scope="row">Indicador </th>
         <td>
           
             <p>Indicator 17.9.1: Dollar value of financial and technical assistance (including through North-South, South&#x2011;South and triangular cooperation) committed to developing countries</p>
@@ -743,7 +766,7 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Helmuga </th>
+        <th scope="row">Meta </th>
         <td>
           
             <p>Target 17.9: Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation</p>
@@ -759,7 +782,7 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Metadatuak eguneratzea </th>
+        <th scope="row">Actualización de metadatos </th>
         <td>
           
             <p>2017-07-09</p>
@@ -775,7 +798,7 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Mundu mailako jarraipenaz arduratzen diren nazioarteko erakundeak </th>
+        <th scope="row">Organizaciones internacionales responsables del seguimiento global </th>
         <td>
           
             <p>Organisation for Economic Co-operation and Development (OECD)</p>
@@ -915,26 +938,6 @@ data-event-label="Change to indicator.sources tab"
             </article>
         </div>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="sources">
-            <article>
-                
-                <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
-
-            </article>
-        </div>
-        
     
     
 </div>
@@ -967,17 +970,17 @@ data-event-label="Change to indicator.sources tab"
 
 
 <script>translations['general'] = translations['general'] || {};
-    translations['general']['hide'] = 'Ezkutatu';</script>
+    translations['general']['hide'] = 'Ocultar';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = 'Bilatu';</script>
+    translations['search']['search'] = 'Buscar';</script>
 
-<script src='/assets/js/sdg.js?v=20250409134219'></script>
+<script src='/assets/js/sdg.js?v=20250512163515'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20250409134219"></script><script>
+    <script src="/assets/js/custom.js?v=20250512163515"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: [],
+  ignoredDisaggregations: null,
 
   language: 'en',
 
@@ -143,7 +143,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20250409134219">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20250512163515">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -181,13 +181,14 @@ layout-indicator
     <div class="header-top">
         <div id="logo" class="logo-header">
             <a id="logo-link" href="https://en.eustat.eus/indice.html">
-                <img src="https://www.eustat.eus/cwImages/2015/logocabecera.png" alt="eustat">
+                <img src="https://sendoamasa.github.io/site/assets/img/LogoEustat.png" alt="eustat">
             </a>
             <div class="logo-header-description">
                 Euskal Estatistika Erakundea<br>Instituto Vasco de Estadística
             </div>
         </div>
         <div id="trigger_home" class="menu-button">
+            <img id="euskadieus-logo"src="https://sendoamasa.github.io/site/assets/img/logo-euskadi-eus.png" alt="eustat">
             <img id="menu-button-img" src="https://www.eustat.eus/cwImages/2015/ham.png" alt="Mostrar/ocultar menu principal">
         </div>
     </div>
@@ -208,6 +209,33 @@ layout-indicator
                 <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://en.eustat.eusprodserv/info_c.html">Information Service</a></li>
                 <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://en.eustat.eus/notas_c.html">Press Service</a></li>
             </ul>
+        </div>
+        <div class="o-content-zutabe">
+            <div class="rrss">
+                <span class="texto-rrss">
+                  Follow Us:
+                </span>
+                <div class="iconos-rrss">
+                    <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/linkedin.gif"></a>
+                    <a href="http://www.facebook.com/eustat" target="_blank" title="Facebook"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/facebook.gif"></a>
+                    <a href="http://twitter.com/eustat" target="_blank" title="X"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/X.gif"></a>
+                    <a href="https://bsky.app/profile/eustat.eus" target="_blank" title="BlueSky"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/BlueSky.png"></a>
+                    <a href="https://www.youtube.com/user/eustat1986/" target="_blank" title="Youtube"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/youtube.png"></a>
+                    <a href="https://en.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
+                        target="_blank" title="Rss novedades" style="display:inline-block;"><img
+                            class="sociales" src="https://www.eustat.eus/cwImages/2015/rss2.png"></a>
+                </div>
+            </div>
         </div>
     </div><!-- zutabeak -->
 </div>
@@ -251,27 +279,36 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="d-flex flex-wrap w-100 justify-content-between">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav" id="menu"><li class="nav-item ">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/en/" id="home" aria-label="Go to homepage" title="Go to homepage">
+    <img src="/assets/img/en/SDG_logo.png" alt="Go to homepage" />
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/en/">Home</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="/en/reporting-status">Reporting Status</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/en/news">Updates</a>
-</li><li class="nav-item ">
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    menu.desagregaciones
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-desagregaciones"><li class=" ">
+    <a class="dropdown-item" href="/en/territorio/">menu.territorio</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/en/municipal/">menu.municipal</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/en/sexo/">menu.sexo</a>
+</li></ul>
+            </li><li class="nav-item ">
     <a class="nav-link" href="/en/faq">FAQ</a>
 </li></ul>
     
-        </div>
-        <div class="header-search-bar">
-          <form class="align-self-lg-end" id="search" action="/en/search/">
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/en/search/">
     <div class="input-group">
         <label class="visually-hidden" for="indicator_search">Search</label>
         <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
@@ -283,43 +320,40 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </form>
 
-        </div>
-        <div class="header-toggles d-flex">
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
 
 
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown  dropdown">
-    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="fa fa-globe"></i>
-      English
-    </button>
-    <ul class="dropdown-menu"><li>
-            <a class="dropdown-item" href="/5-2-1/">
-              Euskera
+  <div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
+            <a class="language-toggle-link" href="/5-2-1/">
+                Español
             </a>
-          </li><li>
-            <a class="dropdown-item" href="/es/5-2-1/">
-              Español
+        </li><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/eu/5-2-1/">
+                Euskera
             </a>
-          </li></ul>
-  </div>
+        </li><li class="language-option-en list-inline-item">
+            <span class="language-toggle-active-language">
+                English
+            </span>
+        </li></ul>
 </div>
 
 
-
-          <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
             <a class="language-toggle-link" href="/5-2-1/">
-                Euskera
-            </a>
-        </li><li class="language-option-es list-inline-item">
-            <a class="language-toggle-link" href="/es/5-2-1/">
                 Español
+            </a>
+        </li><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/eu/5-2-1/">
+                Euskera
             </a>
         </li><li class="language-option-en list-inline-item">
             <span class="language-toggle-active-language">
@@ -332,12 +366,13 @@ data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
 >A</a>
-        </div>
-      </div>
-    </nav>
-  </div>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <div id="top" tabindex=-1></div>
+
 
 
 <script type="text/template" id="item_template">
@@ -433,9 +468,6 @@ data-event-label="high"
         <li class="breadcrumb-item">
             <a href="/en/">Home</a>
         </li>
-        <li class="breadcrumb-item">
-            <a href="/en/goals">Goals</a>
-        </li>
         
         <li class="breadcrumb-item">
             <a href="/en/5/"
@@ -483,14 +515,17 @@ data-event-label="high"
             </div>
             <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-                <div>
-                    <h1>
+            <div>
+                <h1>
+                    
                         
-                        Indicator 5.2.1
+                            Indicator 5.2.1
                         
-                        <span class="lead-copy">Proportion of ever-partnered women and girls aged 15 years and older subjected to physical, sexual or psychological violence by a current or former intimate partner in the previous 12 months, by form of violence and by age</span>
-                    </h1>
-                </div>
+                    
+                    
+                    <span class="lead-copy">Proportion of ever-partnered women and girls aged 15 years and older subjected to physical, sexual or psychological violence by a current or former intimate partner in the previous 12 months, by form of violence and by age</span>
+                </h1>
+            </div>
             </div>
         </div>
     </div>
@@ -515,7 +550,7 @@ data-event-label="high"
   id="indicatorData"
   data-indicatorid='indicator_5-2-1'
   data-id="5-2-1"
-  data-country="Euskadi"
+  data-country="general.pais"
   data-charttitle="Proportion of ever-partnered women and girls aged 15 years and older subjected to physical, sexual or psychological violence by a current or former intimate partner in the previous 12 months, by form of violence and by age"
   data-charttitles="[]"
   data-measurementunit=""
@@ -575,16 +610,16 @@ data-event-label="Change to indicator.national_metadata tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-global"
-                data-bs-target="#global"
-                aria-controls="global"
+                id="tab-sources_alt"
+                data-bs-target="#sources_alt"
+                aria-controls="sources_alt"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.global_metadata tab"
+data-event-label="Change to indicator.sources tab"
 
-            >Global Metadata</button>
+            >Sources</button>
         </li>
     
         
@@ -596,16 +631,16 @@ data-event-label="Change to indicator.global_metadata tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-sources"
-                data-bs-target="#sources"
-                aria-controls="sources"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.sources tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Sources</button>
+            >Global Metadata</button>
         </li>
     
     
@@ -625,7 +660,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>This table provides metadata for the actual indicator available from Euskadi statistics closest to the corresponding global SDG indicator. Please note that even when the global SDG indicator is fully available from Euskaldun statistics, this table should be consulted for information on national methodology and other Euskaldun-specific metadata information.</p>
+                <p>This table provides metadata for the actual indicator available from general.pais statistics closest to the corresponding global SDG indicator. Please note that even when the global SDG indicator is fully available from general.adjetivo statistics, this table should be consulted for information on national methodology and other general.adjetivo-specific metadata information.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -915,6 +950,26 @@ data-event-label="Change to indicator.sources tab"
   
   </tbody>
 </table>
+
+            </article>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources_alt">
+            <article>
+                
+
+                
+
+    
+
 
             </article>
         </div>
@@ -1147,26 +1202,6 @@ data-event-label="Change to indicator.sources tab"
             </article>
         </div>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="sources">
-            <article>
-                
-                <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
-
-            </article>
-        </div>
-        
     
     
 </div>
@@ -1187,26 +1222,6 @@ data-event-label="Change to indicator.sources tab"
                         <li>
                             <a href="https://open-sdg.org">Built using Open SDG</a>
                         </li>
-                        
-                        <li>
-                            <a href="/en/contact-us">Contact us</a>
-                            
-                        </li>
-                        <li>
-                            
-                            <a href="https://twitter.com/MyTwitterAccount" target="_blank">Twitter</a>
-                            
-                        </li>
-                        <li>
-                            
-                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">Facebook</a>
-                            
-                        </li>
-                        <li>
-                            <a href="/en/about/cookies-and-privacy/">Cookies</a>
-                            
-                        </li>
-                        
                         
                         </ul>
                 </div>
@@ -1253,31 +1268,7 @@ data-event-label="Change to indicator.sources tab"
                           src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="AENOR"
                           style="border-width:0px;"></a>
               </div>
-              <div class="rrss">
-                  <span class="texto-rrss">
-                    Follow Us:
-                  </span>
-                  <div class="iconos-rrss">
-                      <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/linkedin.gif"></a>
-                      <a href="http://www.facebook.com/eustat" target="_blank" title="Facebook"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/facebook.gif"></a>
-                      <a href="http://twitter.com/eustat" target="_blank" title="X"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/X.gif"></a>
-                      <a href="https://bsky.app/profile/eustat.eus" target="_blank" title="BlueSky"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/BlueSky.png"></a>
-                      <a href="https://www.youtube.com/user/eustat1986/" target="_blank" title="Youtube"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/youtube.png"></a>
-                      <a href="https://en.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
-                          target="_blank" title="Rss novedades" style="display:inline-block;"><img
-                              class="sociales" src="https://www.eustat.eus/cwImages/2015/rss2.png"></a>
-                  </div>
-              </div>
+              
           </div>
           <div class="piederecho-texto">
               <p class="piederechop bold">Eustat - Basque Statistics Institute</p>
@@ -1323,12 +1314,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20250409134219'></script>
+<script src='/assets/js/sdg.js?v=20250512163515'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20250409134219"></script><script>
+    <script src="/assets/js/custom.js?v=20250512163515"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

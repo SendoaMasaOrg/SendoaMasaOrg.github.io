@@ -128,7 +128,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.proxy = options.proxy;
     this.proxySerieses = options.proxySerieses;
     this.startValues = options.startValues;
-    this.configObsAttributes = [];
+    this.configObsAttributes = null;
     this.allObservationAttributes = options.allObservationAttributes;
 
     // Require at least one geoLayer.
@@ -1292,7 +1292,7 @@ var YEAR_COLUMN = 'Year';
 var VALUE_COLUMN = 'Value';
 // Note this headline color is overridden in indicatorView.js.
 var HEADLINE_COLOR = '#777777';
-var GRAPH_TITLE_FROM_SERIES = false;
+var GRAPH_TITLE_FROM_SERIES = true;
 
   /**
  * Model helper functions with general utility.
@@ -1367,7 +1367,7 @@ function nonFieldColumns() {
       columns.push(tsAttribute.field);
     });
   }
-  var observationAttributes = [];
+  var observationAttributes = null;
   if (observationAttributes && observationAttributes.length > 0) {
     observationAttributes.forEach(function(oAttribute) {
       columns.push(oAttribute.field);
@@ -2556,7 +2556,7 @@ function prepareDataForDataset(years, rows, allObservationAttributes) {
     data: [],
     observationAttributes: [],
   };
-  var configObsAttributes = [];
+  var configObsAttributes = null;
   if (configObsAttributes && configObsAttributes.length > 0) {
     configObsAttributes = configObsAttributes.map(function(obsAtt) {
       return obsAtt.field;
@@ -2785,7 +2785,7 @@ function inputEdges(edges) {
       return true;
     });
   }
-  var configuredObservationAttributes = [];
+  var configuredObservationAttributes = null;
   if (configuredObservationAttributes && configuredObservationAttributes.length > 0) {
     configuredObservationAttributesFlat = configuredObservationAttributes.map(function(att) { return att.field; });
     edgesData = edgesData.filter(function(edge) {
@@ -2829,7 +2829,7 @@ function getAllObservationAttributes(rows) {
   }
   var obsAttributeHash = {},
       footnoteNumber = 0,
-      configObsAttributes = [];
+      configObsAttributes = null;
   if (configObsAttributes && configObsAttributes.length > 0) {
     configObsAttributes = configObsAttributes.map(function(obsAtt) {
       return obsAtt.field;
@@ -3292,7 +3292,7 @@ var mapView = function () {
     $('.map').show();
     $('#map').sdgMap({
       indicatorId: indicatorId,
-      mapOptions: {"disaggregation_controls":true,"minZoom":5,"maxZoom":10,"tileURL":"","tileOptions":{"id":"","accessToken":"","attribution":"My map attribution"},"colorRange":"chroma.brewer.BuGn","noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#888888","dashArray":""},"styleHighlighted":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#111111","dashArray":""},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":"5,5"}},
+      mapOptions: {"disaggregation_controls":true,"minZoom":5,"maxZoom":14,"tileURL":"https://www.geo.euskadi.eus/geoeuskadi/rest/services/U11/WMTS_GRIS/MapServer/WMTS/tile/1.0.0/U11_WMTS_GRIS/default/default028mm/{z}/{y}/{x}.png","tileOptions":{"id":"","accessToken":"","attribution":"<a href=\"https://www.geo.euskadi.eus/\" title=\"Eusko Jaurlaritza/Gobierno Vasco - geoEuskadi\">geoEuskadi</a>"},"colorRange":"chroma.brewer.BuGn","noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#888888","dashArray":""},"styleHighlighted":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#111111","dashArray":""},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":"5,5"}},
       mapLayers: [{"subfolder":"regions","label":"indicator.regions","min_zoom":5,"max_zoom":10,"staticBorders":false}],
       precision: precision,
       precisionItems: precisionItems,
@@ -3439,7 +3439,7 @@ function updateObservationAttributes(obsAttributes) {
  * Gets the text of an observation attribute for display to the end user.
  */
 function getObservationAttributeText(obsAttribute) {
-    var configuredObsAttributes = [];
+    var configuredObsAttributes = null;
     var attributeConfig = _.find(configuredObsAttributes, function(configuredObsAttribute) {
         return configuredObsAttribute.field === obsAttribute.field;
     });

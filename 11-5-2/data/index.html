@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eu" class="no-js">
+<html lang="es" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://SendoaMasaOrg.github.io/sdg-production-data/eu',
+  remoteDataBaseUrl: 'https://SendoaMasaOrg.github.io/sdg-production-data/es',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -42,7 +42,7 @@ var opensdg = {
   // Disaggregations which should be ignored on indicator pages.
   ignoredDisaggregations: null,
 
-  language: 'eu',
+  language: 'es',
 
   mapColors: {
     "default": [
@@ -117,7 +117,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Datuak editatu: 11.5.2 - Garapen Jasangarrirako Helburuen adierazleak</title>
+    <title>Editar datos: 11.5.2 - Indicadores para los Objetivos de Desarrollo Sostenible</title>
 
 
 
@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20250409134219">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20250512163515">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -161,50 +161,78 @@ var translations = {
         
 
     </head>
-<body class="language-eu
+<body class="language-es
 layout-data-editor
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Alfa","default_contrast":"Kontraste estandarra","disable_high_kontrast":"Desaktibatu kontraste handia","disclaimer":"Webgune hau garapen egoeran dago. Eskerrik asko zure <a href=\"mailto:%email_contacts.suggestions\">iruzkinengatik</a>.","enable_high_kontrast":"Kontraste handia gaitu","hide_menu":"Ezkutatu nabigazio-menua","high_contrast":"Kontraste handia","internet_explorer_message":"webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.","internet_explorer_message_title":"Interneteko nabigatzaile hau jada ez da bateragarria","logo_title":"Joan hasierako orrira","show_menu":"Erakutsi nabigazio-menua","skip_link":"Eduki nagusira joan","tag_line":"Gure mundua eraldatzeko 17 helburu","toggle_menu":"Txandakatu menua. Egin klik menua zabaltzeko edo uzkurtzeko.","toggle_search":"Bilaketa-barra. Egin klik bilaketa-barra handitzeko edo murrizteko."};</script>
+<script>translations['header'] = {"alpha":"Alfa","default_contrast":"Contraste estándar","disable_high_contrast":"Desactivar alto contraste","disclaimer":"Este es un sitio web de desarrollo. Agradecemos sus <a href=\"mailto:%email_contacts.suggestions\">comentarios</a>.","enable_high_contrast":"Habilitar alto contraste","hide_menu":"Ocultar el menú de navegación","high_contrast":"Alto contraste","internet_explorer_message":"Hemos detectado que está utilizando Internet Explorer para visitar este sitio web. Internet Explorer ahora está siendo eliminado por Microsoft. Como resultado, este sitio web ya no es compatible con ninguna versión de Internet Explorer. Algunas características de este sitio no funcionarán. Debe usar un navegador moderno como Edge, Chrome, Firefox o Safari. Si tiene dificultades para instalar o acceder a un navegador diferente, comuníquese con su equipo de soporte de TI.","internet_explorer_message_title":"Este navegador de Internet ya no es compatible","logo_title":"Ir a la página de inicio","show_menu":"Mostrar el menú de navegación","skip_link":"Saltar al contenido principal","tag_line":"17 Objetivos para transformar nuestro mundo","toggle_menu":"Alternar menú. Haga clic para expandir o contraer el menú.","toggle_search":"Barra de búsqueda. Haga clic para ampliar o reducir la barra de búsqueda."};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Eduki nagusira joan</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Saltar al contenido principal</a>
 <div class="container internet-explorer-message">
-    <h2 class="internet-explorer-message-title">Interneteko nabigatzaile hau jada ez da bateragarria</h2>
-    <p class="internet-explorer-message-body">webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.</p>
+    <h2 class="internet-explorer-message-title">Este navegador de Internet ya no es compatible</h2>
+    <p class="internet-explorer-message-body">Hemos detectado que está utilizando Internet Explorer para visitar este sitio web. Internet Explorer ahora está siendo eliminado por Microsoft. Como resultado, este sitio web ya no es compatible con ninguna versión de Internet Explorer. Algunas características de este sitio no funcionarán. Debe usar un navegador moderno como Edge, Chrome, Firefox o Safari. Si tiene dificultades para instalar o acceder a un navegador diferente, comuníquese con su equipo de soporte de TI.</p>
 </div>
 <header role="banner" class="">
   <div class="header" >
     <div class="header-top">
         <div id="logo" class="logo-header">
-            <a id="logo-link" href="https://eu.eustat.eus/indice.html">
-                <img src="https://www.eustat.eus/cwImages/2015/logocabecera.png" alt="eustat">
+            <a id="logo-link" href="https://es.eustat.eus/indice.html">
+                <img src="https://sendoamasa.github.io/site/assets/img/LogoEustat.png" alt="eustat">
             </a>
             <div class="logo-header-description">
                 Euskal Estatistika Erakundea<br>Instituto Vasco de Estadística
             </div>
         </div>
         <div id="trigger_home" class="menu-button">
+            <img id="euskadieus-logo"src="https://sendoamasa.github.io/site/assets/img/logo-euskadi-eus.png" alt="eustat">
             <img id="menu-button-img" src="https://www.eustat.eus/cwImages/2015/ham.png" alt="Mostrar/ocultar menu principal">
         </div>
     </div>
     <div class="zutabeak">
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://eu.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Gaiak</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://eu.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Eragiketak</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://eu.eustat.eus/bancopx/spanish/indice.html">Datu Bankua</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://eu.eustat.eus/indice.html#cy">Koiunturakoa</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://eu.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Udal informazioa</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://es.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Temas</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://es.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Operaciones</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://es.eustat.eus/bancopx/spanish/indice.html">Banco de datos</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://es.eustat.eus/indice.html#cy">Coyuntura</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://es.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Info. municipal</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://eu.eustat.eus/estadisticas/calendario.html">Egutegia</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://eu.eustat.eus/productosServicios/sugerencias.html">Kexak/iradokizunak</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://eu.eustat.eusprodserv/info_c.html">Informazio zerbitzua</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://eu.eustat.eus/notas_c.html">Prentsa-gunea</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://es.eustat.eus/estadisticas/calendario.html">Calendario</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://es.eustat.eus/productosServicios/sugerencias.html">Quejas y sugerencias</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://es.eustat.eusprodserv/info_c.html">Servicio de información</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://es.eustat.eus/notas_c.html">Servicio de prensa</a></li>
             </ul>
+        </div>
+        <div class="o-content-zutabe">
+            <div class="rrss">
+                <span class="texto-rrss">
+                  Síganos:
+                </span>
+                <div class="iconos-rrss">
+                    <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/linkedin.gif"></a>
+                    <a href="http://www.facebook.com/eustat" target="_blank" title="Facebook"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/facebook.gif"></a>
+                    <a href="http://twitter.com/eustat" target="_blank" title="X"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/X.gif"></a>
+                    <a href="https://bsky.app/profile/eustat.eus" target="_blank" title="BlueSky"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/BlueSky.png"></a>
+                    <a href="https://www.youtube.com/user/eustat1986/" target="_blank" title="Youtube"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/youtube.png"></a>
+                    <a href="https://es.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
+                        target="_blank" title="Rss novedades" style="display:inline-block;"><img
+                            class="sociales" src="https://www.eustat.eus/cwImages/2015/rss2.png"></a>
+                </div>
+            </div>
         </div>
     </div><!-- zutabeak -->
 </div>
@@ -248,97 +276,104 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Erakutsi nabigazio-menua">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="d-flex flex-wrap w-100 justify-content-between">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/">Hasiera</a>
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/" id="home" aria-label="Ir a la página de inicio" title="Ir a la página de inicio">
+    <img src="/assets/img/SDG_logo.png" alt="Ir a la página de inicio" />
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Mostrar el menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/">Inicio</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/reporting-status">Informazioaren egoera</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/news">Eguneratzeak</a>
-</li><li class="nav-item ">
+    <a class="nav-link" href="/reporting-status">Estado de informes</a>
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    menu.desagregaciones
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-desagregaciones"><li class=" ">
+    <a class="dropdown-item" href="/territorio/">menu.territorio</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/municipal/">menu.municipal</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sexo/">menu.sexo</a>
+</li></ul>
+            </li><li class="nav-item ">
     <a class="nav-link" href="/faq">FAQ</a>
 </li></ul>
     
-        </div>
-        <div class="header-search-bar">
-          <form class="align-self-lg-end" id="search" action="/search/">
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Bilatu</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Bilatu">
+        <label class="visually-hidden" for="indicator_search">Buscar</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Buscar">
         <span class="input-group-append">
-            <button class="btn btn-outline-secondary ms-n5" aria-label="Bilatu web-orrian" id="search-btn" type="submit">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Buscar en el sitio" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
             </button>
         </span>
     </div>
 </form>
 
-        </div>
-        <div class="header-toggles d-flex">
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
 
 
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown  dropdown">
-    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="fa fa-globe"></i>
-      Euskera
-    </button>
-    <ul class="dropdown-menu"><li>
-            <a class="dropdown-item" href="/es/11-5-2/data/">
-              Español
-            </a>
-          </li><li>
-            <a class="dropdown-item" href="/en/11-5-2/data/">
-              English
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-          <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+  <div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
             <span class="language-toggle-active-language">
-                Euskera
-            </span>
-        </li><li class="language-option-es list-inline-item">
-            <a class="language-toggle-link" href="/es/11-5-2/data/">
                 Español
+            </span>
+        </li><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/eu/11-5-2/data/">
+                Euskera
             </a>
         </li><li class="language-option-en list-inline-item">
             <a class="language-toggle-link" href="/en/11-5-2/data/">
                 English
             </a>
         </li></ul>
-</div></span><a title="" aria-label=""
+</div>
+
+
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
+            <span class="language-toggle-active-language">
+                Español
+            </span>
+        </li><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/eu/11-5-2/data/">
+                Euskera
+            </a>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/en/11-5-2/data/">
+                English
+            </a>
+        </li></ul>
+</div></span><a title="Habilitar alto contraste" aria-label="Habilitar alto contraste"
     data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
 >A</a>
-        </div>
-      </div>
-    </nav>
-  </div>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <div id="top" tabindex=-1></div>
 
+
 <div id="main-content" class="container" role="main">
   <div class="row no-gutters">
-    <div class="col-md-12"><h1>Datuak editatu: 11.5.2</h1></div>
+    <div class="col-md-12"><h1>Editar datos: 11.5.2</h1></div>
   </div>
   <div class="row config-widgets">
     <div class="col-md-6 data-grid-buttons">
@@ -486,28 +521,8 @@ data-event-label="high"
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org">Open SDGrekin eraikia</a>
+                            <a href="https://open-sdg.org">Construido usando Open SDG</a>
                         </li>
-                        
-                        <li>
-                            <a href="/contact-us">Kontaktatu</a>
-                            
-                        </li>
-                        <li>
-                            
-                            <a href="https://twitter.com/MyTwitterAccount" target="_blank">Twitter</a>
-                            
-                        </li>
-                        <li>
-                            
-                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">Facebook</a>
-                            
-                        </li>
-                        <li>
-                            <a href="/about/cookies-and-privacy/">Cookieak</a>
-                            
-                        </li>
-                        
                         
                         </ul>
                 </div>
@@ -520,13 +535,13 @@ data-event-label="high"
           <div class="centradomini">
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/about/links_c.html">Estekak</a></li>
+                          data-ajax="false" href="https://es.eustat.eus/about/links_c.html">Enlaces</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/faq_c.html">FAQ</a></li>
+                          data-ajax="false" href="https://es.eustat.eus/faq_c.html">FAQ</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/sitemap_c.html">Mapa</a></li>
+                          data-ajax="false" href="https://es.eustat.eus/sitemap_c.html">Mapa</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_04" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/accesibilidad_c.html">Erabilerraztasuna</a>
+                          data-ajax="false" href="https://es.eustat.eus/accesibilidad_c.html">Accesibilidad</a>
                   </li>
               </ul>
           </div>
@@ -534,11 +549,11 @@ data-event-label="high"
               <div class="Prayamini"></div>
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.euskadi.eus/about/a_eustat_c.html">Eustati buruz</a></li>
+                          data-ajax="false" href="https://es.euskadi.eus/about/a_eustat_c.html">Acerca de Eustat</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.euskadi.eus/">Egoitza elektronikoa</a></li>
+                          data-ajax="false" href="https://es.euskadi.eus/">Sede electrónica</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/privacidad_c.html">Pribatutasuna</a></li>
+                          data-ajax="false" href="https://es.eustat.eus/privacidad_c.html">Privacidad</a></li>
               </ul>
           </div>
       </div>
@@ -546,47 +561,23 @@ data-event-label="high"
           <div class="logos-rrss-pie">
               <div class="logos">
                   <a id="ctl00_Pie_pieCOL03_07" data-ajax="false"
-                      href="https://eu.eustat.eus/about/aenor_c.html"><img
+                      href="https://es.eustat.eus/about/aenor_c.html"><img
                           src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt="AENOR"
                           style="border-width:0px;"></a>
                   <a id="ctl00_Pie_pieCOL03_07b" data-ajax="false"
-                      href="https://eu.eustat.eus/about/aenor_c.html"><img
+                      href="https://es.eustat.eus/about/aenor_c.html"><img
                           src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="AENOR"
                           style="border-width:0px;"></a>
               </div>
-              <div class="rrss">
-                  <span class="texto-rrss">
-                    Jarraiguzu:
-                  </span>
-                  <div class="iconos-rrss">
-                      <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/linkedin.gif"></a>
-                      <a href="http://www.facebook.com/eustat" target="_blank" title="Facebook"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/facebook.gif"></a>
-                      <a href="http://twitter.com/eustat" target="_blank" title="X"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/X.gif"></a>
-                      <a href="https://bsky.app/profile/eustat.eus" target="_blank" title="BlueSky"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/BlueSky.png"></a>
-                      <a href="https://www.youtube.com/user/eustat1986/" target="_blank" title="Youtube"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/youtube.png"></a>
-                      <a href="https://eu.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
-                          target="_blank" title="Rss novedades" style="display:inline-block;"><img
-                              class="sociales" src="https://www.eustat.eus/cwImages/2015/rss2.png"></a>
-                  </div>
-              </div>
+              
           </div>
           <div class="piederecho-texto">
               <p class="piederechop bold">Eustat - Euskal Estatistika Erakundea - Instituto Vasco de Estadística</p>
-              <p class="piederechop">Eustat, Euskal AEko informazio estatistiko ofiziala garatu, ekoiztu eta zabaltzen duen erakunde publikoa da</p>
+              <p class="piederechop">Eustat es el organismo público que desarrolla, produce y difunde información estadística oficial de la C.A. de Euskadi.</p>
               <p class="piederechop">
                 c/Donostia - San Sebastián, 1<br>
                 01010 Vitoria-Gasteiz<br>
-                Tel: (+34) 945017500<br>
+                Tfno: (+34) 945017500<br>
                 Fax: (+34) 945017501<br>
                 webmaster_eustat@eustat.eus
               </p>
@@ -617,17 +608,17 @@ data-event-label="high"
 
 
 <script>translations['general'] = translations['general'] || {};
-    translations['general']['hide'] = 'Ezkutatu';</script>
+    translations['general']['hide'] = 'Ocultar';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = 'Bilatu';</script>
+    translations['search']['search'] = 'Buscar';</script>
 
-<script src='/assets/js/sdg.js?v=20250409134219'></script>
+<script src='/assets/js/sdg.js?v=20250512163515'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20250409134219"></script><script>
+    <script src="/assets/js/custom.js?v=20250512163515"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

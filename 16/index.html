@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eu" class="no-js">
+<html lang="es" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://SendoaMasaOrg.github.io/sdg-production-data/eu',
+  remoteDataBaseUrl: 'https://SendoaMasaOrg.github.io/sdg-production-data/es',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -42,7 +42,7 @@ var opensdg = {
   // Disaggregations which should be ignored on indicator pages.
   ignoredDisaggregations: null,
 
-  language: 'eu',
+  language: 'es',
 
   mapColors: {
     "default": [
@@ -118,7 +118,7 @@ var translations = {
 
         
     
-    <title>Helburua 16 - Bakea, justizia eta instituzio sendoak - Garapen Jasangarrirako Helburuen adierazleak</title>
+    <title>Objetivo 16 - Paz, justicia e instituciones fuertes - Indicadores para los Objetivos de Desarrollo Sostenible</title>
     
 
 
@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20250409134219">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20250512163515">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -161,50 +161,78 @@ var translations = {
         
 
     </head>
-<body class="language-eu
+<body class="language-es
 layout-goal
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Alfa","default_contrast":"Kontraste estandarra","disable_high_kontrast":"Desaktibatu kontraste handia","disclaimer":"Webgune hau garapen egoeran dago. Eskerrik asko zure <a href=\"mailto:%email_contacts.suggestions\">iruzkinengatik</a>.","enable_high_kontrast":"Kontraste handia gaitu","hide_menu":"Ezkutatu nabigazio-menua","high_contrast":"Kontraste handia","internet_explorer_message":"webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.","internet_explorer_message_title":"Interneteko nabigatzaile hau jada ez da bateragarria","logo_title":"Joan hasierako orrira","show_menu":"Erakutsi nabigazio-menua","skip_link":"Eduki nagusira joan","tag_line":"Gure mundua eraldatzeko 17 helburu","toggle_menu":"Txandakatu menua. Egin klik menua zabaltzeko edo uzkurtzeko.","toggle_search":"Bilaketa-barra. Egin klik bilaketa-barra handitzeko edo murrizteko."};</script>
+<script>translations['header'] = {"alpha":"Alfa","default_contrast":"Contraste estándar","disable_high_contrast":"Desactivar alto contraste","disclaimer":"Este es un sitio web de desarrollo. Agradecemos sus <a href=\"mailto:%email_contacts.suggestions\">comentarios</a>.","enable_high_contrast":"Habilitar alto contraste","hide_menu":"Ocultar el menú de navegación","high_contrast":"Alto contraste","internet_explorer_message":"Hemos detectado que está utilizando Internet Explorer para visitar este sitio web. Internet Explorer ahora está siendo eliminado por Microsoft. Como resultado, este sitio web ya no es compatible con ninguna versión de Internet Explorer. Algunas características de este sitio no funcionarán. Debe usar un navegador moderno como Edge, Chrome, Firefox o Safari. Si tiene dificultades para instalar o acceder a un navegador diferente, comuníquese con su equipo de soporte de TI.","internet_explorer_message_title":"Este navegador de Internet ya no es compatible","logo_title":"Ir a la página de inicio","show_menu":"Mostrar el menú de navegación","skip_link":"Saltar al contenido principal","tag_line":"17 Objetivos para transformar nuestro mundo","toggle_menu":"Alternar menú. Haga clic para expandir o contraer el menú.","toggle_search":"Barra de búsqueda. Haga clic para ampliar o reducir la barra de búsqueda."};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Eduki nagusira joan</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Saltar al contenido principal</a>
 <div class="container internet-explorer-message">
-    <h2 class="internet-explorer-message-title">Interneteko nabigatzaile hau jada ez da bateragarria</h2>
-    <p class="internet-explorer-message-body">webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.</p>
+    <h2 class="internet-explorer-message-title">Este navegador de Internet ya no es compatible</h2>
+    <p class="internet-explorer-message-body">Hemos detectado que está utilizando Internet Explorer para visitar este sitio web. Internet Explorer ahora está siendo eliminado por Microsoft. Como resultado, este sitio web ya no es compatible con ninguna versión de Internet Explorer. Algunas características de este sitio no funcionarán. Debe usar un navegador moderno como Edge, Chrome, Firefox o Safari. Si tiene dificultades para instalar o acceder a un navegador diferente, comuníquese con su equipo de soporte de TI.</p>
 </div>
 <header role="banner" class="">
   <div class="header" >
     <div class="header-top">
         <div id="logo" class="logo-header">
-            <a id="logo-link" href="https://eu.eustat.eus/indice.html">
-                <img src="https://www.eustat.eus/cwImages/2015/logocabecera.png" alt="eustat">
+            <a id="logo-link" href="https://es.eustat.eus/indice.html">
+                <img src="https://sendoamasa.github.io/site/assets/img/LogoEustat.png" alt="eustat">
             </a>
             <div class="logo-header-description">
                 Euskal Estatistika Erakundea<br>Instituto Vasco de Estadística
             </div>
         </div>
         <div id="trigger_home" class="menu-button">
+            <img id="euskadieus-logo"src="https://sendoamasa.github.io/site/assets/img/logo-euskadi-eus.png" alt="eustat">
             <img id="menu-button-img" src="https://www.eustat.eus/cwImages/2015/ham.png" alt="Mostrar/ocultar menu principal">
         </div>
     </div>
     <div class="zutabeak">
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://eu.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Gaiak</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://eu.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Eragiketak</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://eu.eustat.eus/bancopx/spanish/indice.html">Datu Bankua</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://eu.eustat.eus/indice.html#cy">Koiunturakoa</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://eu.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Udal informazioa</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://es.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Temas</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://es.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Operaciones</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://es.eustat.eus/bancopx/spanish/indice.html">Banco de datos</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://es.eustat.eus/indice.html#cy">Coyuntura</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://es.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Info. municipal</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://eu.eustat.eus/estadisticas/calendario.html">Egutegia</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://eu.eustat.eus/productosServicios/sugerencias.html">Kexak/iradokizunak</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://eu.eustat.eusprodserv/info_c.html">Informazio zerbitzua</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://eu.eustat.eus/notas_c.html">Prentsa-gunea</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://es.eustat.eus/estadisticas/calendario.html">Calendario</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://es.eustat.eus/productosServicios/sugerencias.html">Quejas y sugerencias</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://es.eustat.eusprodserv/info_c.html">Servicio de información</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://es.eustat.eus/notas_c.html">Servicio de prensa</a></li>
             </ul>
+        </div>
+        <div class="o-content-zutabe">
+            <div class="rrss">
+                <span class="texto-rrss">
+                  Síganos:
+                </span>
+                <div class="iconos-rrss">
+                    <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/linkedin.gif"></a>
+                    <a href="http://www.facebook.com/eustat" target="_blank" title="Facebook"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/facebook.gif"></a>
+                    <a href="http://twitter.com/eustat" target="_blank" title="X"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/X.gif"></a>
+                    <a href="https://bsky.app/profile/eustat.eus" target="_blank" title="BlueSky"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/BlueSky.png"></a>
+                    <a href="https://www.youtube.com/user/eustat1986/" target="_blank" title="Youtube"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/youtube.png"></a>
+                    <a href="https://es.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
+                        target="_blank" title="Rss novedades" style="display:inline-block;"><img
+                            class="sociales" src="https://www.eustat.eus/cwImages/2015/rss2.png"></a>
+                </div>
+            </div>
         </div>
     </div><!-- zutabeak -->
 </div>
@@ -248,93 +276,100 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Erakutsi nabigazio-menua">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="d-flex flex-wrap w-100 justify-content-between">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/">Hasiera</a>
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/" id="home" aria-label="Ir a la página de inicio" title="Ir a la página de inicio">
+    <img src="/assets/img/SDG_logo.png" alt="Ir a la página de inicio" />
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Mostrar el menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/">Inicio</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/reporting-status">Informazioaren egoera</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/news">Eguneratzeak</a>
-</li><li class="nav-item ">
+    <a class="nav-link" href="/reporting-status">Estado de informes</a>
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    menu.desagregaciones
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-desagregaciones"><li class=" ">
+    <a class="dropdown-item" href="/territorio/">menu.territorio</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/municipal/">menu.municipal</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sexo/">menu.sexo</a>
+</li></ul>
+            </li><li class="nav-item ">
     <a class="nav-link" href="/faq">FAQ</a>
 </li></ul>
     
-        </div>
-        <div class="header-search-bar">
-          <form class="align-self-lg-end" id="search" action="/search/">
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Bilatu</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Bilatu">
+        <label class="visually-hidden" for="indicator_search">Buscar</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Buscar">
         <span class="input-group-append">
-            <button class="btn btn-outline-secondary ms-n5" aria-label="Bilatu web-orrian" id="search-btn" type="submit">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Buscar en el sitio" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
             </button>
         </span>
     </div>
 </form>
 
-        </div>
-        <div class="header-toggles d-flex">
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
 
 
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown  dropdown">
-    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="fa fa-globe"></i>
-      Euskera
-    </button>
-    <ul class="dropdown-menu"><li>
-            <a class="dropdown-item" href="/es/16/">
-              Español
-            </a>
-          </li><li>
-            <a class="dropdown-item" href="/en/16/">
-              English
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-          <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+  <div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
             <span class="language-toggle-active-language">
-                Euskera
-            </span>
-        </li><li class="language-option-es list-inline-item">
-            <a class="language-toggle-link" href="/es/16/">
                 Español
+            </span>
+        </li><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/eu/16/">
+                Euskera
             </a>
         </li><li class="language-option-en list-inline-item">
             <a class="language-toggle-link" href="/en/16/">
                 English
             </a>
         </li></ul>
-</div></span><a title="" aria-label=""
+</div>
+
+
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
+            <span class="language-toggle-active-language">
+                Español
+            </span>
+        </li><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/eu/16/">
+                Euskera
+            </a>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/en/16/">
+                English
+            </a>
+        </li></ul>
+</div></span><a title="Habilitar alto contraste" aria-label="Habilitar alto contraste"
     data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
 >A</a>
-        </div>
-      </div>
-    </nav>
-  </div>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <div id="top" tabindex=-1></div>
+
 
 
 <div class="container">
@@ -342,10 +377,10 @@ data-event-label="high"
     <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
         
         <li class="breadcrumb-item" >
-            <a href="/">Hasiera</a>
+            <a href="/">Inicio</a>
         </li>
         <li class="breadcrumb-item" >
-            <a href="/goals">Helburuak</a>
+            <a href="/goals">Objetivos</a>
         </li>
         
         
@@ -357,12 +392,12 @@ data-event-label="high"
     <div class="text-left">
         <a class="btn btn-primary" href="/15/" aria-labelledby="previous-link">
             <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            <span id="previous-link" class="d-none d-md-inline">Aurreko helburua</span>
+            <span id="previous-link" class="d-none d-md-inline">Objetivo anterior</span>
         </a>
     </div>
     <div class="text-right">
         <a class="btn btn-primary" href="/17/" aria-labelledby="next-link">
-            <span id="next-link" class="d-none d-md-inline">Hurrengo helburua</span>
+            <span id="next-link" class="d-none d-md-inline">Siguiente objetivo</span>
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </a>
     </div>
@@ -376,12 +411,12 @@ data-event-label="high"
     <div class="container">
         <div class="row">
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <img src="https://sendoamasa.github.io/site/assets/img/goals/eu/16.png" alt="Bakea, justizia eta instituzio sendoak - Helburua 16" id="goal-16" class="goal-icon-image goal-icon-image-" />
+                <img src="https://sendoamasa.github.io/site/assets/img/goals/es/16.png" alt="Paz, justicia e instituciones fuertes - Objetivo 16" id="goal-16" class="goal-icon-image goal-icon-image-" />
             </div>
             <div class="col-8 col-md-9 col-lg-10 goal-details">
                 <h1>
                     
-                        Garapen jasangarrirako gizarte baketsu eta inklusiboak sustatzea, guztioi justiziarako sarbidea erraztea, eta euren jarduerak eta kontuak azaltzen dituzten erakunde eraginkorrak eta inklusiboak sortzea maila guztietan
+                        Promover sociedades pacíficas e inclusivas para el desarrollo sostenible, facilitar el acceso a la justicia para todos y construir a todos los niveles instituciones eficaces e inclusivas que rindan cuentas
                     
                 </h1>
             </div>
@@ -403,7 +438,7 @@ data-event-label="high"
   <div class="container g-0 ">
     <div class="row align-items-end">
       <div class="col">
-        <h2 class="goal-page-heading">Helmugak eta adierazleak</h2>
+        <h2 class="goal-page-heading">Metas e indicadores</h2>
       </div>
       
     </div>
@@ -413,11 +448,11 @@ data-event-label="high"
       <div class="row align-items-start goal-target">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.1</span>
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.1</span>
             </h3>
           </div>
           <div class="col goal-page-target-name">
-            <span class="target-name">Nabarmen murriztea indarkeria‐mota guztiak, eta horiei lotutako heriotza‐tasak, mundu guztian</span>
+            <span class="target-name">Reducir significativamente todas las formas de violencia y las correspondientes tasas de mortalidad en todo el mundo</span>
           </div>
           
       </div>
@@ -432,25 +467,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.1.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.1.1</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-1-1/">Nahita eginiko hilketen biktimen kopurua 100.000 biztanleko, sexuaren eta adinaren arabera banatuta</a></span>
+              <span class="indicator-name"><a href="/16-1-1/">Número de víctimas de homicidios intencionales por cada 100.000 habitantes, desglosado por sexo y edad</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -472,25 +507,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.1.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.1.2</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-1-2/">Gatazkekin lotura duten heriotzak 100.000 biztanleko, sexuaren, adinaren eta kausaren arabera banatuta</a></span>
+              <span class="indicator-name"><a href="/16-1-2/">Muertes relacionadas con conflictos por cada 100.000 habitantes, desglosadas por sexo, edad y causa</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -512,25 +547,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.1.3</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.1.3</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-1-3/">Azken 12 hilabeteetan a) indarkeria fisikoa, b) indarkeria psikologikoa edo c) sexu-indarkeria pairatu duen biztanleriaren proportzioa</a></span>
+              <span class="indicator-name"><a href="/16-1-3/">Proporción de la población que ha sufrido a) violencia física, b) violencia psicológica y c) violencia sexual en los últimos 12 meses</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -552,25 +587,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.1.4</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.1.4</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-1-4/">Ilundu ondoren bere bizilekuan bakarrik ibiltzean seguru sentitzen den biztanleriaren proportzioa</a></span>
+              <span class="indicator-name"><a href="/16-1-4/">Proporción de la población que se siente segura al caminar sola en su zona de residencia</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -588,11 +623,11 @@ data-event-label="high"
       <div class="row align-items-start goal-target">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.2</span>
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.2</span>
             </h3>
           </div>
           <div class="col goal-page-target-name">
-            <span class="target-name">Amaiera ematea haurren kontrako tratu txarrei, esplotazioari eta indarkeria‐ eta tortura‐mota guztiei</span>
+            <span class="target-name">Poner fin al maltrato, la explotación, la trata y todas las formas de violencia y tortura contra los niños</span>
           </div>
           
       </div>
@@ -607,25 +642,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.2.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.2.1</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-2-1/">Azken hilabetean beren zaintzaileen zigor fisiko edo eraso psikologikoren bat jaso duten 1 eta 17 urte bitarteko haurren proportzioa</a></span>
+              <span class="indicator-name"><a href="/16-2-1/">Proporción de niños de entre 1 y 17 años que han sufrido algún castigo físico o agresión psicológica a manos de sus cuidadores en el último mes</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -647,25 +682,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.2.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.2.2</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-2-2/">Pertsonen salerosketaren biktimen kopurua 100.000 biztanleko, sexuaren, adinaren eta esplotazio-motaren arabera banatuta</a></span>
+              <span class="indicator-name"><a href="/16-2-2/">Número de víctimas de la trata de personas por cada 100.000 habitantes, desglosado por sexo, edad y tipo de explotación</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -687,25 +722,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.2.3</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.2.3</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-2-3/">18 urte bete aurretik sexu-indarkeria pairatu zuten 18 eta 29 urte bitarteko emakumeen eta gizonen proportzioa</a></span>
+              <span class="indicator-name"><a href="/16-2-3/">Proporción de mujeres y hombres jóvenes de entre 18 y 29 años que sufrieron violencia sexual antes de cumplir los 18 años</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -723,11 +758,11 @@ data-event-label="high"
       <div class="row align-items-start goal-target">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.3</span>
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.3</span>
             </h3>
           </div>
           <div class="col goal-page-target-name">
-            <span class="target-name">Zuzenbidezko estatua sustatzea maila nazionalean eta nazioartean, eta justizia eskuragarri izateko aukera‐berdintasuna bermatzea denontzat</span>
+            <span class="target-name">Promover el estado de derecho en los planos nacional e internacional y garantizar la igualdad de acceso a la justicia para todos</span>
           </div>
           
       </div>
@@ -742,25 +777,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.3.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.3.1</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-3-1/">Azken 12 hilabeteetan indarkeria pairatu duten eta biktimizazioa agintari eskudunei edo gatazkak konpontzeko ofizialki onartutako beste mekanismo batzuei jakinarazi dieten biktimen kopurua</a></span>
+              <span class="indicator-name"><a href="/16-3-1/">Proporción de víctimas de violencia en los últimos 12 meses que han notificado su victimización a las autoridades competentes u otros mecanismos de resolución de conflictos reconocidos oficialmente</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -782,25 +817,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.3.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.3.2</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-3-2/">Preso dauden biztanle guztien artean kondenatuak izan ez diren atxilotuen proportzioa</a></span>
+              <span class="indicator-name"><a href="/16-3-2/">Proporción de detenidos que no han sido condenados en el conjunto de la población reclusa total</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -822,25 +857,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.3.3</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.3.3</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-3-3/">Azken bi urteetan gatazkaren batean parte hartu duten eta gatazkak konpontzeko mekanismo ofizial zein ez-ofizial batean sartu diren biztanleen proportzioa, mekanismo-motaren arabera banatuta</a></span>
+              <span class="indicator-name"><a href="/16-3-3/">Proporción de la población que se ha visto implicada en alguna controversia en los dos últimos años y ha accedido a algún mecanismo oficial u oficioso de solución de controversias, desglosada por tipo de mecanismo</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -858,11 +893,11 @@ data-event-label="high"
       <div class="row align-items-start goal-target">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.4</span>
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.4</span>
             </h3>
           </div>
           <div class="col goal-page-target-name">
-            <span class="target-name">2030. urterako, nabarmen murriztea finantza‐korronteak eta legez kanpoko armenak, lapurtutako aktiboen berreskurapena eta itzulera sendotzea, eta antolatutako delinkuentzia‐mota guztien aurka borroka egitea</span>
+            <span class="target-name">De aquí a 2030, reducir significativamente las corrientes financieras y de armas ilícitas, fortalecer la recuperación y devolución de los activos robados y luchar contra todas las formas de delincuencia organizada</span>
           </div>
           
       </div>
@@ -877,25 +912,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.4.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.4.1</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-4-1/">Sartzen eta irteten diren legez kanpoko finantza-korronteen guztizko balioa (Estatu Batuetako indarreko dolarretan)</a></span>
+              <span class="indicator-name"><a href="/16-4-1/">Valor total de las corrientes financieras ilícitas entrantes y salientes (en dólares corrientes de los Estados Unidos)</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -917,25 +952,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.4.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.4.2</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-4-2/">Konfiskatutako, aurkitutako edo entregatutako armen proportzioa, haien legez kanpoko jatorria edo testuingurua agintari eskudun batek zehaztu edo ezarri badu, nazioarteko tresnekin bat etorriz</a></span>
+              <span class="indicator-name"><a href="/16-4-2/">Proporción de armas incautadas, encontradas o entregadas cuyo origen o contexto ilícitos han sido determinados o establecidos por una autoridad competente, de conformidad con los instrumentos internacionales</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -953,11 +988,11 @@ data-event-label="high"
       <div class="row align-items-start goal-target">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.5</span>
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.5</span>
             </h3>
           </div>
           <div class="col goal-page-target-name">
-            <span class="target-name">Nabarmen murriztea ustelkeria eta eroskeria, bere forma guztietan</span>
+            <span class="target-name">Reducir considerablemente la corrupción y el soborno en todas sus formas</span>
           </div>
           
       </div>
@@ -972,25 +1007,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.5.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.5.1</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-5-1/">Azken 12 hilabeteetan, funtzionario publiko batekin gutxienez harremana izan eta hari eskupekoa ordaindu dioten edo funtzionario publiko batek eskupekoa eskatu dien pertsonen proportzioa</a></span>
+              <span class="indicator-name"><a href="/16-5-1/">Proporción de personas que han tenido al menos un contacto con un funcionario público y que han pagado un soborno a un funcionario público, o a las que un funcionario público les ha pedido un soborno, durante los últimos 12 meses</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -1012,25 +1047,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.5.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.5.2</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-5-2/">Azken 12 hilabeteetan, funtzionario publiko batekin gutxienez harremana izan eta hari eskupekoa ordaindu dioten edo funtzionario publiko batek eskupekoa eskatu dien negozioen proportzioa</a></span>
+              <span class="indicator-name"><a href="/16-5-2/">Proporción de negocios que han tenido al menos un contacto con un funcionario público y que han pagado un soborno a un funcionario público, o a los que un funcionario público les ha pedido un soborno, durante los últimos 12 meses</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -1048,11 +1083,11 @@ data-event-label="high"
       <div class="row align-items-start goal-target">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.6</span>
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.6</span>
             </h3>
           </div>
           <div class="col goal-page-target-name">
-            <span class="target-name">Kontuak emango dituzten erakunde eraginkorrak eta gardenak sortzea maila guztietan</span>
+            <span class="target-name">Crear a todos los niveles instituciones eficaces y transparentes que rindan cuentas</span>
           </div>
           
       </div>
@@ -1067,25 +1102,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.6.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.6.1</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-6-1/">Gobernuaren oinarrizko gastuak, hasieran onartutako aurrekontuarekiko proportzioan, sektorearen arabera banatuta (edo aurrekontu-kodeen edo antzeko elementuen arabera)</a></span>
+              <span class="indicator-name"><a href="/16-6-1/">Gastos primarios del gobierno en proporción al presupuesto aprobado originalmente, desglosados por sector (o por códigos presupuestarios o elementos similares)</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -1107,25 +1142,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.6.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.6.2</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-6-2/">Oinarrizko zerbitzuekin izandako azken esperientziarekin pozik gelditu diren biztanleen proportzioa</a></span>
+              <span class="indicator-name"><a href="/16-6-2/">Proporción de la población que se siente satisfecha con su última experiencia de los servicios públicos</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -1143,11 +1178,11 @@ data-event-label="high"
       <div class="row align-items-start goal-target">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.7</span>
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.7</span>
             </h3>
           </div>
           <div class="col goal-page-target-name">
-            <span class="target-name">Beharrei erantzungo dieten erabaki inklusiboak, parte‐hartzaileak eta esanguratsuak hartuko direla bermatzea maila guztietan</span>
+            <span class="target-name">Garantizar la adopción en todos los niveles de decisiones inclusivas, participativas y representativas que respondan a las necesidades</span>
           </div>
           
       </div>
@@ -1162,25 +1197,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.7.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.7.1</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-7-1/">Tokiko zein estatuko erakundeetako plazen proportzioak, besteak beste, a) legebiltzarretan, b) administrazio publikoan eta c) botere judizialean, banaketa nazionalarekin alderatuta, eta sexuaren, adinaren, desgaitasunen bat duten pertsonen eta biztanle-taldeen arabera banatuta</a></span>
+              <span class="indicator-name"><a href="/16-7-1/">Proporciones de plazas en las instituciones nacionales y locales, entre ellas: a) las asambleas legislativas, b) la administración pública y c) el poder judicial, en comparación con la distribución nacional, desglosadas por sexo, edad, personas con discapacidad y grupos de población</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -1202,25 +1237,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.7.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.7.2</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-7-2/">Erabakiak modu inklusiboan hartzen direla eta horrek bere beharrei erantzuten diola uste duen biztanleriaren proportzioa, sexuaren, adinaren, desgaitasunen bat duten pertsonen eta biztanle-taldeen arabera banatuta</a></span>
+              <span class="indicator-name"><a href="/16-7-2/">Proporción de la población que considera que la adopción de decisiones es inclusiva y responde a sus necesidades, desglosada por sexo, edad, discapacidad y grupo de población</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -1238,11 +1273,11 @@ data-event-label="high"
       <div class="row align-items-start goal-target">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.8</span>
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.8</span>
             </h3>
           </div>
           <div class="col goal-page-target-name">
-            <span class="target-name">Garapen‐bidean dauden herrialdeen parte‐hartzea areagotzea eta sendotzea mundu‐mailako gobernamendu‐erakundeetan</span>
+            <span class="target-name">Ampliar y fortalecer la participación de los países en desarrollo en las instituciones de gobernanza mundial</span>
           </div>
           
       </div>
@@ -1257,25 +1292,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.8.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.8.1</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-8-1/">Garapen-bidean dauden herrialdeek nazioarteko erakundeetan dituzten ordezkarien eta boto-eskubideen proportzioa</a></span>
+              <span class="indicator-name"><a href="/16-8-1/">Proporción de miembros y derechos de voto de los países en desarrollo en organizaciones internacionales</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -1293,11 +1328,11 @@ data-event-label="high"
       <div class="row align-items-start goal-target">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.9</span>
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.9</span>
             </h3>
           </div>
           <div class="col goal-page-target-name">
-            <span class="target-name">2030. urterako, denok nortasun juridikoa izan dezagula ahalbidetzea, batez ere jaiotzak erregistratzearen bidez</span>
+            <span class="target-name">De aquí a 2030, proporcionar acceso a una identidad jurídica para todos, en particular mediante el registro de nacimientos</span>
           </div>
           
       </div>
@@ -1312,25 +1347,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.9.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.9.1</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-9-1/">Jaiotza erakunde zibil batean erregistratuta duten 5 urtetik beherako haurren proportzioa, adinaren arabera banatuta</a></span>
+              <span class="indicator-name"><a href="/16-9-1/">Proporción de niños menores de 5 años cuyo nacimiento se ha registrado ante una autoridad civil, desglosada por edad</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -1348,11 +1383,11 @@ data-event-label="high"
       <div class="row align-items-start goal-target">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.10</span>
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.10</span>
             </h3>
           </div>
           <div class="col goal-page-target-name">
-            <span class="target-name">Informaziorako sarbide publikoa bermatzea eta oinarrizko askatasunak babestea, lege nazionalekin eta nazioarteko hitzarmenekin bat etorriz</span>
+            <span class="target-name">Garantizar el acceso público a la información y proteger las libertades fundamentales, de conformidad con las leyes nacionales y los acuerdos internacionales</span>
           </div>
           
       </div>
@@ -1367,25 +1402,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.10.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.10.1</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-10-1/">Azken 12 hilabeteetan egiaztatu diren kazetarien, komunikabideetako kideen, sindikalisten eta giza eskubideen defendatzaileen hilketen, bahiketen, bortxazko desagerpenen, atxiloketa arbitrarioen eta torturen kasuen kopurua</a></span>
+              <span class="indicator-name"><a href="/16-10-1/">Número de casos verificados de asesinato, secuestro, desaparición forzada, detención arbitraria y tortura de periodistas, miembros asociados de los medios de comunicación, sindicalistas y defensores de los derechos humanos, en los últimos 12 meses</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -1407,80 +1442,25 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.10.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.10.2</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-10-2/">Zenbat herrialdek hartzen eta aplikatzen dituzten konstituzio-, lege- eta arau-bermeak informaziorako sarbide publikorako</a></span>
+              <span class="indicator-name"><a href="/16-10-2/">Número de países que adoptan y aplican garantías constitucionales, legales o normativas para el acceso público a la información</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.a</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Nazioarteko erakunde egokiak indartzea, baita nazioarteko lankidetzaren bidez ere, indarkeria prebenitzeko eta terrorismoari eta delinkuentziari aurka egiteko ahalmena sortzeko, maila guztietan, bereziki garapen‐bidean dauden herrialdeetan</span>
-          </div>
-          
-      </div>
-        
-
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.a.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/16-a-1/">Giza eskubideen aldeko erakunde nazional independenteak izatea, Parisko Printzipioak betez</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
-        
-
-
-
-<span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -1498,11 +1478,11 @@ data-event-label="high"
       <div class="row align-items-start goal-target">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Helmuga</span> 16.b</span>
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.a</span>
             </h3>
           </div>
           <div class="col goal-page-target-name">
-            <span class="target-name">Diskriminaziozkoak ez diren legeak eta politikak sustatzea eta aplikatzea, garapen jasangarriaren alde</span>
+            <span class="target-name">Fortalecer las instituciones nacionales pertinentes, incluso mediante la cooperación internacional, para crear a todos los niveles, particularmente en los países en desarrollo, la capacidad de prevenir la violencia y combatir el terrorismo y la delincuencia</span>
           </div>
           
       </div>
@@ -1517,25 +1497,80 @@ data-event-label="high"
           
             <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 16.b.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.a.1</span>
               </h4>
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/16-b-1/">Azken 12 hilabeteetan, giza eskubideen nazioarteko legeek debekatzen dituzten diskriminazio-moduren bat dela eta diskriminatuta edo erasotuta sentitu den biztanleriaren proportzioa</a></span>
+              <span class="indicator-name"><a href="/16-a-1/">Existencia de instituciones nacionales independientes de derechos humanos, en cumplimiento de los Principios de París</a></span>
               
 
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
         
 
 
 
 <span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
+    <span class="status-inner">Datos no disponibles</span>
+</span>
+
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 16.b</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Promover y aplicar leyes y políticas no discriminatorias en favor del desarrollo sostenible</span>
+          </div>
+          
+      </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 16.b.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/16-b-1/">Proporción de la población que declara haberse sentido personalmente discriminada o acosada en los últimos 12 meses por motivos de discriminación prohibidos por el derecho internacional de los derechos humanos</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Datos no disponibles</span>
 </span>
 
 
@@ -1550,7 +1585,7 @@ data-event-label="high"
         <hr class="goal-page-target-rule" />
     
   </div>
-  <a href="#top">Gora itzuli</a>
+  <a href="#top">Volver arriba</a>
 </div>
 
 
@@ -1561,28 +1596,8 @@ data-event-label="high"
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org">Open SDGrekin eraikia</a>
+                            <a href="https://open-sdg.org">Construido usando Open SDG</a>
                         </li>
-                        
-                        <li>
-                            <a href="/contact-us">Kontaktatu</a>
-                            
-                        </li>
-                        <li>
-                            
-                            <a href="https://twitter.com/MyTwitterAccount" target="_blank">Twitter</a>
-                            
-                        </li>
-                        <li>
-                            
-                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">Facebook</a>
-                            
-                        </li>
-                        <li>
-                            <a href="/about/cookies-and-privacy/">Cookieak</a>
-                            
-                        </li>
-                        
                         
                         </ul>
                 </div>
@@ -1595,13 +1610,13 @@ data-event-label="high"
           <div class="centradomini">
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/about/links_c.html">Estekak</a></li>
+                          data-ajax="false" href="https://es.eustat.eus/about/links_c.html">Enlaces</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/faq_c.html">FAQ</a></li>
+                          data-ajax="false" href="https://es.eustat.eus/faq_c.html">FAQ</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/sitemap_c.html">Mapa</a></li>
+                          data-ajax="false" href="https://es.eustat.eus/sitemap_c.html">Mapa</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_04" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/accesibilidad_c.html">Erabilerraztasuna</a>
+                          data-ajax="false" href="https://es.eustat.eus/accesibilidad_c.html">Accesibilidad</a>
                   </li>
               </ul>
           </div>
@@ -1609,11 +1624,11 @@ data-event-label="high"
               <div class="Prayamini"></div>
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.euskadi.eus/about/a_eustat_c.html">Eustati buruz</a></li>
+                          data-ajax="false" href="https://es.euskadi.eus/about/a_eustat_c.html">Acerca de Eustat</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.euskadi.eus/">Egoitza elektronikoa</a></li>
+                          data-ajax="false" href="https://es.euskadi.eus/">Sede electrónica</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/privacidad_c.html">Pribatutasuna</a></li>
+                          data-ajax="false" href="https://es.eustat.eus/privacidad_c.html">Privacidad</a></li>
               </ul>
           </div>
       </div>
@@ -1621,47 +1636,23 @@ data-event-label="high"
           <div class="logos-rrss-pie">
               <div class="logos">
                   <a id="ctl00_Pie_pieCOL03_07" data-ajax="false"
-                      href="https://eu.eustat.eus/about/aenor_c.html"><img
+                      href="https://es.eustat.eus/about/aenor_c.html"><img
                           src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt="AENOR"
                           style="border-width:0px;"></a>
                   <a id="ctl00_Pie_pieCOL03_07b" data-ajax="false"
-                      href="https://eu.eustat.eus/about/aenor_c.html"><img
+                      href="https://es.eustat.eus/about/aenor_c.html"><img
                           src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="AENOR"
                           style="border-width:0px;"></a>
               </div>
-              <div class="rrss">
-                  <span class="texto-rrss">
-                    Jarraiguzu:
-                  </span>
-                  <div class="iconos-rrss">
-                      <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/linkedin.gif"></a>
-                      <a href="http://www.facebook.com/eustat" target="_blank" title="Facebook"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/facebook.gif"></a>
-                      <a href="http://twitter.com/eustat" target="_blank" title="X"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/X.gif"></a>
-                      <a href="https://bsky.app/profile/eustat.eus" target="_blank" title="BlueSky"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/BlueSky.png"></a>
-                      <a href="https://www.youtube.com/user/eustat1986/" target="_blank" title="Youtube"
-                          style="display:inline-block;"><img class="sociales"
-                              src="https://www.eustat.eus/cwImages/2015/youtube.png"></a>
-                      <a href="https://eu.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
-                          target="_blank" title="Rss novedades" style="display:inline-block;"><img
-                              class="sociales" src="https://www.eustat.eus/cwImages/2015/rss2.png"></a>
-                  </div>
-              </div>
+              
           </div>
           <div class="piederecho-texto">
               <p class="piederechop bold">Eustat - Euskal Estatistika Erakundea - Instituto Vasco de Estadística</p>
-              <p class="piederechop">Eustat, Euskal AEko informazio estatistiko ofiziala garatu, ekoiztu eta zabaltzen duen erakunde publikoa da</p>
+              <p class="piederechop">Eustat es el organismo público que desarrolla, produce y difunde información estadística oficial de la C.A. de Euskadi.</p>
               <p class="piederechop">
                 c/Donostia - San Sebastián, 1<br>
                 01010 Vitoria-Gasteiz<br>
-                Tel: (+34) 945017500<br>
+                Tfno: (+34) 945017500<br>
                 Fax: (+34) 945017501<br>
                 webmaster_eustat@eustat.eus
               </p>
@@ -1692,17 +1683,17 @@ data-event-label="high"
 
 
 <script>translations['general'] = translations['general'] || {};
-    translations['general']['hide'] = 'Ezkutatu';</script>
+    translations['general']['hide'] = 'Ocultar';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = 'Bilatu';</script>
+    translations['search']['search'] = 'Buscar';</script>
 
-<script src='/assets/js/sdg.js?v=20250409134219'></script>
+<script src='/assets/js/sdg.js?v=20250512163515'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20250409134219"></script><script>
+    <script src="/assets/js/custom.js?v=20250512163515"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
